@@ -1,8 +1,9 @@
 const express = require('express');
+var bodyParser = require('body-parser')
 const app = express();
 
-app.use(body-parser.json());
-app.use(body-parser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 let users = [
     {
