@@ -69,7 +69,7 @@ app.post('/users', (req, res) => {
 
     const id = users.reduce((maxId, user) => {
         return user.id > maxId ? user.id : maxId
-    }, 0);
+    }, 0) + 1;
 
     const newUser = { id : id, name :  name };
     users.push(newUser);
