@@ -1,7 +1,7 @@
 var bodyParser = require('body-parser')
 const app = express();
 
-app.use('/users', require('./api/user'));
+app.use('/users', require('./api/users'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
