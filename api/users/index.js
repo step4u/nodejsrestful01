@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+/* commented cause by controller
 let users = [
     {
       id: 1,
@@ -16,10 +17,6 @@ let users = [
     }
 ];
 
-router.get('/', (req, res) => {
-    res.send('Hello World!\n');
-});
-  
 router.get('/', (req, res) => {
     return res.json(users);
 });
@@ -68,5 +65,12 @@ router.post('/', (req, res) => {
 
     return res.status(201).json(users);
 });
+*/
+
+const controller = require('./user.controller');
+router.get('/', controller.index);
+router.get('/:id', controller.show);
+router.delete('/:id', controller.destroy);
+router.post('/', controller.create);
 
 module.exports = router;
