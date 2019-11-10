@@ -1,3 +1,6 @@
+var util = require("../../util.js");
+var isEmpty = util.isEmpty;
+
 var users = [
   {
     id: 1,
@@ -62,6 +65,6 @@ exports.create = (req, res) => {
   return res.status(201).json(users);
 };
 
-var isEmpty = function(obj) {
-  return Object.keys(obj).length === 0;
-}
+// var isEmpty = function(obj) {
+//   return Object.keys(obj).length === 0;
+// }
